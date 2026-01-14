@@ -40,8 +40,6 @@ if [[ "${target_platform}" == linux* ]]; then
     fi
     INSTALL_SYSROOT="$PREFIX/$rel"
     CMAKE_PLATFORM_FLAGS+=("-DCMAKE_AR=${GCC_AR}")
-    CMAKE_PLATFORM_FLAGS+=("-DCLANG_DEFAULT_LINKER=${LD_GOLD}")
-    CMAKE_PLATFORM_FLAGS+=("-DDEFAULT_SYSROOT=${INSTALL_SYSROOT}")
     CMAKE_PLATFORM_FLAGS+=("-DRT_LIBRARY=${INSTALL_SYSROOT}/usr/lib/librt.so")
 
 else
